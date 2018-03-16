@@ -1,0 +1,248 @@
+
+143098@lab200ab-ws07 MINGW64 ~
+$ git init lab1
+Initialized empty Git repository in C:/Users/143098/lab1/.git/
+
+143098@lab200ab-ws07 MINGW64 ~
+$ notepad li.txt
+
+143098@lab200ab-ws07 MINGW64 ~
+$ cd lab1
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$ notepad li.txt
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$ git add .
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$ git commit -m "Initial commit"
+[master (root-commit) dab47aa] Initial commit
+ Committer: dimitrievska.tamara@students.finki.ukim.mk <dimitrievska.tamara@students.finki.ukim.mk>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 li.txt
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$ notepad li.txt
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$ git add .
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$ git commit -m "modify li.txt"
+[master 6a82411] modify li.txt
+ Committer: dimitrievska.tamara@students.finki.ukim.mk <dimitrievska.tamara@students.finki.ukim.mk>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$ git remote add origin https://github.com/tamarad14/repo1.git
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$ git push -u origin master
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com': tamara_dimitrievska@yahoo.com
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 481 bytes | 481.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/tamarad14/repo1.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$ notepad li.txt
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   li.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$ git add .
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   li.txt
+
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$ git reset HEAD li.txt
+Unstaged changes after reset:
+M       li.txt
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$ notepad li.txt
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$ git reset --hard
+HEAD is now at 6a82411 modify li.txt
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$ notepad li.txt
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$ git branch1
+git: 'branch1' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$ git checkout -b branch1
+Switched to a new branch 'branch1'
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (branch1)
+$ git push origin branch1
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/tamarad14/repo1.git
+ * [new branch]      branch1 -> branch1
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (branch1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (master)
+$ git checkout -b logging
+Switched to a new branch 'logging'
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (logging)
+$ git push origin logging
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/tamarad14/repo1.git
+ * [new branch]      logging -> logging
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (logging)
+$ git log
+commit 6a82411855f85154b548210b3e83e8a35f7f8603 (HEAD -> logging, origin/master, origin/logging, origin/branch1, master, branch1)
+Author: dimitrievska.tamara@students.finki.ukim.mk <dimitrievska.tamara@students.finki.ukim.mk>
+Date:   Fri Mar 16 15:46:57 2018 +0100
+
+    modify li.txt
+
+commit dab47aa6236adb7fad5ddaa9b7459e2d7296d8d9
+Author: dimitrievska.tamara@students.finki.ukim.mk <dimitrievska.tamara@students.finki.ukim.mk>
+Date:   Fri Mar 16 15:42:08 2018 +0100
+
+    Initial commit
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (logging)
+$ ^C
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (logging)
+$ notepad log.txt
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (logging)
+$ git push origin logging
+Everything up-to-date
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (logging)
+$ git add log.txt
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (logging)
+$ git commit -m "commit2"
+[logging bd888ee] commit2
+ Committer: dimitrievska.tamara@students.finki.ukim.mk <dimitrievska.tamara@students.finki.ukim.mk>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 11 insertions(+)
+ create mode 100644 log.txt
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (logging)
+$ git merge master
+Already up to date.
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (logging)
+$ git checkout -b allcomands
+Switched to a new branch 'allcomands'
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (allcomands)
+$ notepad commands.txt
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 11 insertions(+)
+ create mode 100644 log.txt
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (logging)
+$ git merge master
+Already up to date.
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (logging)
+$ git checkout -b allcomands
+Switched to a new branch 'allcomands'
+
+143098@lab200ab-ws07 MINGW64 ~/lab1 (allcomands)
+$ notepad commands.txt
+
+
