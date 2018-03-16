@@ -1,0 +1,11 @@
+commit 6a82411855f85154b548210b3e83e8a35f7f8603 (HEAD -> logging, origin/master, origin/logging, origin/branch1, master, branch1)
+Author: dimitrievska.tamara@students.finki.ukim.mk <dimitrievska.tamara@students.finki.ukim.mk>
+Date:   Fri Mar 16 15:46:57 2018 +0100
+
+    modify li.txt
+
+commit dab47aa6236adb7fad5ddaa9b7459e2d7296d8d9
+Author: dimitrievska.tamara@students.finki.ukim.mk <dimitrievska.tamara@students.finki.ukim.mk>
+Date:   Fri Mar 16 15:42:08 2018 +0100
+
+    Initial commit
